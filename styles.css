@@ -84,12 +84,12 @@ input {
 }
 
 .site-header {
-  min-height: 74px;
+  min-height: 104px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 0 22px;
+  gap: 30px;
+  padding: 16px 26px;
   background: rgba(3, 6, 7, 0.94);
   border-color: rgba(224, 119, 45, 0.52);
   box-shadow: 0 18px 56px rgba(0, 0, 0, 0.58), inset 0 0 0 1px rgba(233, 200, 160, 0.04);
@@ -122,10 +122,10 @@ input {
 .main-nav {
   display: flex;
   justify-content: flex-end;
-  gap: 26px;
+  gap: 34px;
   color: var(--muted);
-  font-size: 14px;
-  letter-spacing: 0.12em;
+  font-size: 22px;
+  letter-spacing: 0.08em;
 }
 
 .main-nav a:hover {
@@ -525,7 +525,7 @@ input {
   }
 
   .site-header {
-    padding: 16px;
+    padding: 18px;
   }
 
   .brand {
@@ -534,7 +534,7 @@ input {
 
   .main-nav {
     gap: 12px 16px;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .hero {

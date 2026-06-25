@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-25 14:33 PDT
+Last updated: 2026-06-25 14:34 PDT
 Updated by: Codex
 
 ## Status
@@ -19,6 +19,7 @@ Updated by: Codex
 - Header now uses the Market Street AI logo image.
 - Header background darkened to improve logo visibility.
 - Header logo switched to the white logo variant.
+- Header panel height and navigation label size increased.
 
 ## Active objective
 
@@ -55,13 +56,13 @@ Updated by: Codex
 ## Working tree
 
 - Initial GitHub commit: `7402ced` (`Initial Market Street AI website`) pushed to `origin/main`.
-- Latest content update switches the top header image from `Logos/logo 3.png` to `Logos/white.png`.
+- Latest content update increases top header height/padding and enlarges `What You Get`, `Sample Issue`, and `Operator` nav labels.
 - Expected changed files from the newsletter pass: `index.html`, `styles.css`, `script.js`, `.ai/STATE.md`, `.ai/sessions/2026-06-25_10-33_codex_newsletter_landing.md`, `.ai/sessions/2026-06-25_11-31_codex_map_texture_background.md`, `.ai/sessions/2026-06-25_11-51_codex_github_initial_push.md`, `docs/superpowers/specs/2026-06-25-newsletter-landing-page-design.md`, and `docs/superpowers/plans/2026-06-25-newsletter-landing-page.md`.
 - Do not overwrite: `Market Street AI - standalone (1).html`.
 
 ## Verification status
 
-- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; operator image exists and returns `HTTP/1.0 200 OK`; white logo image exists and returns `HTTP/1.0 200 OK`; served CSS confirms darker `.site-header` background; browser snapshot confirms header contains `img "Market Street AI"` and operator section includes `img "Mike Miller, Spark AI"`; GitHub repo existed empty before push; `git push -u origin main` succeeded.
+- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; operator image exists and returns `HTTP/1.0 200 OK`; white logo image exists and returns `HTTP/1.0 200 OK`; served CSS confirms `.site-header` min-height `104px` and `.main-nav` font-size `22px`; browser snapshot confirms header contains `img "Market Street AI"` plus `What You Get`, `Sample Issue`, and `Operator` links; GitHub repo existed empty before push; `git push -u origin main` succeeded.
 - Not yet verified: real email-provider submission; deployed-host rendering; social preview card; compressed production background asset.
 
 ## Next action

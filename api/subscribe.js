@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   };
 
   try {
-    // Create subscriber as unactivated — they'll get a confirmation email
+    // Create subscriber as unactivated — they'll need to confirm
     const response = await fetch("https://api.buttondown.email/v1/subscribers", {
       method: "POST",
       headers: bdHeaders,
@@ -29,12 +29,17 @@ export default async function handler(req, res) {
     const data = await response.json();
 
     if (response.status === 201) {
-      // Send the confirmation email (triggers the double-opt-in flow)
+      // Send the confirmation email
       const subId = data.id;
-      await fetch(`https://api.buttondown.email/v1/subscribers/${subId}/send-reminder`, {
-        method: "POST",
-        headers: bdHeaders,
-      });
+      try {
+        await fetch(`https://api.buttondown.email/v1/subscribers/${subId}/send-reminder`, {
+          method: "POST",
+          headers: bdHeaders,
+        });
+      } catch (reminderErr) {
+        // Don't fail the whole request if the reminder fails
+        console.error("send-reminder failed:", reminderErr);
+      }
       return res.status(200).json({ success: true });
     }
 
@@ -52,6 +57,7 @@ export default async function handler(req, res) {
 
     return res.status(response.status).json({ error: data.detail || "Subscription failed" });
   } catch (err) {
+    console.error("subscribe error:", err);
     return res.status(500).json({ error: "Server error. Please try again later." });
   }
 }

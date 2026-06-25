@@ -1,0 +1,9 @@
+.DS_Store
+**/.DS_Store
+.playwright-mcp/
+node_modules/
+dist/
+build/
+.env
+.env.*
+output-*.png

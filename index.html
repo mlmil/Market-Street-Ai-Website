@@ -77,7 +77,11 @@
                 if (res.ok) {
                   form.reset();
                   btn.textContent = "Subscribed";
-                  status.textContent = "You're on the list. Check your inbox for a confirmation email.";
+                  if (data.already_subscribed) {
+                    status.textContent = "You're already subscribed! Check your inbox for the confirmation email.";
+                  } else {
+                    status.textContent = "You're on the list. Check your inbox for a confirmation email.";
+                  }
                 } else {
                   btn.disabled = false;
                   btn.textContent = "Get The Brief";

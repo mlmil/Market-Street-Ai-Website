@@ -35,6 +35,10 @@ export default async function handler(req, res) {
     }
 
     if (response.status === 400) {
+      // Already subscribed — Buttondown returns this verbose message
+      if (typeof data.detail === "string" && data.detail.includes("already subscribed")) {
+        return res.status(200).json({ success: true, already_subscribed: true });
+      }
       return res.status(400).json({ error: data.detail || "Subscription failed" });
     }
 

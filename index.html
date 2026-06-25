@@ -45,16 +45,15 @@
           <p class="hero-lede">Practical AI-powered weekly playbooks and insights for the Ventura and Oxnard business community.</p>
 
           <form
-            class="signup-form"
+            class="signup-form embeddable-buttondown-form"
             id="newsletter-form"
-            action="https://buttondown.email/api/emails/embed-subscribe/mikemllr77"
+            action="https://buttondown.com/api/emails/embed-subscribe/mikemllr77"
             method="post"
-            target="popupwindow"
-            onsubmit="window.open('', 'popupwindow', 'width=500,height=600')"
           >
             <label for="email">Join the newsletter</label>
             <div class="signup-row">
               <input id="email" name="email" type="email" autocomplete="email" placeholder="you@business.com" required>
+              <input type="hidden" name="embed" value="1">
               <button class="button" type="submit">Get The Brief</button>
             </div>
             <p class="form-note" id="form-status">Weekly. Local. Built for practical business use.</p>

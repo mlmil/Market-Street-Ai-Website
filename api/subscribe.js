@@ -9,34 +9,41 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Valid email address required" });
   }
 
+  const bdHeaders = {
+    Authorization: *** ${process.env.BUTTONDOWN_API_TOKEN}`,
+    "Content-Type": "application/json",
+  };
+
   try {
+    // Create subscriber as unactivated — they'll get a confirmation email
     const response = await fetch("https://api.buttondown.email/v1/subscribers", {
       method: "POST",
-      headers: {
-        Authorization: `Token ${process.env.BUTTONDOWN_API_TOKEN}`,
-        "Content-Type": "application/json",
-      },
+      headers: bdHeaders,
       body: JSON.stringify({
         email_address: email,
         metadata: { source: "website" },
         tags: ["website-signup"],
-        type: "regular",
       }),
     });
 
     const data = await response.json();
 
     if (response.status === 201) {
+      // Send the confirmation email (triggers the double-opt-in flow)
+      const subId = data.id;
+      await fetch(`https://api.buttondown.email/v1/subscribers/${subId}/send-reminder`, {
+        method: "POST",
+        headers: bdHeaders,
+      });
       return res.status(200).json({ success: true });
     }
 
-    // Already subscribed or other non-fatal error
+    // Already subscribed
     if (response.status === 400 && data.code === "subscriber_blocked") {
       return res.status(400).json({ error: "This email couldn't be subscribed. Please try a different email." });
     }
 
     if (response.status === 400) {
-      // Already subscribed — Buttondown returns this verbose message
       if (typeof data.detail === "string" && data.detail.includes("already subscribed")) {
         return res.status(200).json({ success: true, already_subscribed: true });
       }

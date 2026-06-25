@@ -450,7 +450,7 @@ input {
 
 .operator-note {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 330px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
   gap: 32px;
   align-items: center;
   margin-top: 14px;
@@ -466,8 +466,8 @@ input {
 .operator-portrait {
   margin: 0;
   justify-self: end;
-  width: min(100%, 330px);
-  aspect-ratio: 0.72;
+  width: min(100%, 520px);
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid rgba(198, 93, 34, 0.38);
   border-radius: 4px;
@@ -480,8 +480,8 @@ input {
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center top;
-  filter: contrast(1.06) brightness(0.92);
+  object-position: center center;
+  filter: contrast(1.04) brightness(0.9);
 }
 
 .site-footer {
@@ -585,7 +585,7 @@ input {
 
   .operator-portrait {
     justify-self: start;
-    width: min(100%, 260px);
+    width: 100%;
   }
 
   .content-section {

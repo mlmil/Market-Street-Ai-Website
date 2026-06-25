@@ -20,6 +20,7 @@ export default async function handler(req, res) {
         email_address: email,
         metadata: { source: "website" },
         tags: ["website-signup"],
+        type: "regular",
       }),
     });
 

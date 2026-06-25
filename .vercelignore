@@ -1,0 +1,4 @@
+newsletter/
+*.af
+*.af~lock~
+.DS_Store

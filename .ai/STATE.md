@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-25 14:24 PDT
+Last updated: 2026-06-25 14:26 PDT
 Updated by: Codex
 
 ## Status
@@ -16,6 +16,7 @@ Updated by: Codex
 - Operator image display increased by 20%.
 - Operator section now stacks text above the image, with the image increased another 20%.
 - Operator image crop removed so the studio photo renders at its natural ratio.
+- Header now uses the Market Street AI logo image.
 
 ## Active objective
 
@@ -32,6 +33,7 @@ Updated by: Codex
 - The current signup form is front-end only and does not yet send email addresses to a provider.
 - Background image source: `Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921.jpeg`.
 - Operator image source: `Biopics/mikes-bio-pic-master-small.jpg`.
+- Header logo source: `Logos/logo 3.png`.
 
 ## Decisions in force
 
@@ -51,13 +53,13 @@ Updated by: Codex
 ## Working tree
 
 - Initial GitHub commit: `7402ced` (`Initial Market Street AI website`) pushed to `origin/main`.
-- Latest content update removes forced crop/distortion from the operator image and lets it render at natural ratio up to 900px wide.
+- Latest content update replaces the text header mark with `Logos/logo 3.png`.
 - Expected changed files from the newsletter pass: `index.html`, `styles.css`, `script.js`, `.ai/STATE.md`, `.ai/sessions/2026-06-25_10-33_codex_newsletter_landing.md`, `.ai/sessions/2026-06-25_11-31_codex_map_texture_background.md`, `.ai/sessions/2026-06-25_11-51_codex_github_initial_push.md`, `docs/superpowers/specs/2026-06-25-newsletter-landing-page-design.md`, and `docs/superpowers/plans/2026-06-25-newsletter-landing-page.md`.
 - Do not overwrite: `Market Street AI - standalone (1).html`.
 
 ## Verification status
 
-- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; operator image exists and returns `HTTP/1.0 200 OK`; browser snapshot confirms the operator section includes `img "Mike Miller, Spark AI"` after removing forced crop; GitHub repo existed empty before push; `git push -u origin main` succeeded.
+- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; operator image exists and returns `HTTP/1.0 200 OK`; logo image exists and returns `HTTP/1.0 200 OK`; browser snapshot confirms header contains `img "Market Street AI"` and operator section includes `img "Mike Miller, Spark AI"`; GitHub repo existed empty before push; `git push -u origin main` succeeded.
 - Not yet verified: real email-provider submission; deployed-host rendering; social preview card; compressed production background asset.
 
 ## Next action

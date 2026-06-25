@@ -106,23 +106,14 @@ input {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--text);
-  font-size: 23px;
-  letter-spacing: 0.12em;
+  display: block;
+  width: min(430px, 48vw);
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--accent-dark);
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 26px;
+.brand img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .main-nav {
@@ -535,7 +526,7 @@ input {
   }
 
   .brand {
-    font-size: 19px;
+    width: min(100%, 310px);
   }
 
   .main-nav {

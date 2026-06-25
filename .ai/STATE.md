@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-25 14:21 PDT
+Last updated: 2026-06-25 14:23 PDT
 Updated by: Codex
 
 ## Status
@@ -14,6 +14,7 @@ Updated by: Codex
 - Local Git repository initialized and pushed to GitHub.
 - Operator bio image switched to the wider studio photo.
 - Operator image display increased by 20%.
+- Operator section now stacks text above the image, with the image increased another 20%.
 
 ## Active objective
 
@@ -49,13 +50,13 @@ Updated by: Codex
 ## Working tree
 
 - Initial GitHub commit: `7402ced` (`Initial Market Street AI website`) pushed to `origin/main`.
-- Latest content update increases the operator-section image display from 520px max width to 624px max width.
+- Latest content update stacks the operator-section text above the image and increases image display from 624px max width to 749px max width.
 - Expected changed files from the newsletter pass: `index.html`, `styles.css`, `script.js`, `.ai/STATE.md`, `.ai/sessions/2026-06-25_10-33_codex_newsletter_landing.md`, `.ai/sessions/2026-06-25_11-31_codex_map_texture_background.md`, `.ai/sessions/2026-06-25_11-51_codex_github_initial_push.md`, `docs/superpowers/specs/2026-06-25-newsletter-landing-page-design.md`, and `docs/superpowers/plans/2026-06-25-newsletter-landing-page.md`.
 - Do not overwrite: `Market Street AI - standalone (1).html`.
 
 ## Verification status
 
-- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; operator image exists and returns `HTTP/1.0 200 OK`; browser snapshot confirms the operator section includes `img "Mike Miller, Spark AI"` after the 20% size increase; GitHub repo existed empty before push; `git push -u origin main` succeeded.
+- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; operator image exists and returns `HTTP/1.0 200 OK`; browser snapshot confirms the operator section includes `img "Mike Miller, Spark AI"` after the stacked 749px image update; GitHub repo existed empty before push; `git push -u origin main` succeeded.
 - Not yet verified: real email-provider submission; deployed-host rendering; social preview card; compressed production background asset.
 
 ## Next action

@@ -450,23 +450,23 @@ input {
 
 .operator-note {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(432px, 624px);
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 26px;
   align-items: center;
   margin-top: 14px;
   padding: 42px;
 }
 
 .operator-copy p:last-child {
-  max-width: 760px;
+  max-width: 840px;
   margin-bottom: 0;
   font-size: 18px;
 }
 
 .operator-portrait {
   margin: 0;
-  justify-self: end;
-  width: min(100%, 624px);
+  justify-self: start;
+  width: min(100%, 749px);
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid rgba(198, 93, 34, 0.38);

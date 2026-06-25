@@ -450,7 +450,7 @@ input {
 
 .operator-note {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+  grid-template-columns: minmax(0, 1fr) minmax(432px, 624px);
   gap: 32px;
   align-items: center;
   margin-top: 14px;
@@ -466,7 +466,7 @@ input {
 .operator-portrait {
   margin: 0;
   justify-self: end;
-  width: min(100%, 520px);
+  width: min(100%, 624px);
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid rgba(198, 93, 34, 0.38);

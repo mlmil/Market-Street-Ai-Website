@@ -1,9 +1,17 @@
+# Newsletter content and API tokens (not for public repo)
+newsletter/
+
+# Affinity Photo working files
+*.af
+*.af~lock~
+
+# OS files
 .DS_Store
-**/.DS_Store
-.playwright-mcp/
-node_modules/
-dist/
-build/
-.env
-.env.*
-output-*.png
+
+# Unclassified logos (keep white.png and social-preview.png)
+Logos/logo 2.png
+Logos/logo1.png
+
+# Misc
+prompts/.md.md
+prompts/handoff.md

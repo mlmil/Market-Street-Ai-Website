@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-25 11:51 PDT
+Last updated: 2026-06-25 14:16 PDT
 Updated by: Codex
 
 ## Status
@@ -12,6 +12,7 @@ Updated by: Codex
 - Newsletter promise in force: “805 AI News & Moves” with “Practical AI-powered weekly playbooks and insights for the Ventura and Oxnard business community.”
 - The Ventura map image is now used as the fixed textured page background.
 - Local Git repository initialized and pushed to GitHub.
+- Bio portrait added to the operator section.
 
 ## Active objective
 
@@ -27,6 +28,7 @@ Updated by: Codex
 - Website strategy and task context live in `Progress Files/` and `Assets /Market Street Ai Website/Market Street Ai Elements/`.
 - The current signup form is front-end only and does not yet send email addresses to a provider.
 - Background image source: `Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921.jpeg`.
+- Operator portrait source: `Biopics/biopic small.png`.
 
 ## Decisions in force
 
@@ -46,12 +48,13 @@ Updated by: Codex
 ## Working tree
 
 - Initial GitHub commit: `7402ced` (`Initial Market Street AI website`) pushed to `origin/main`.
+- Latest content update will add `Biopics/biopic small.png` plus operator-section markup/styles.
 - Expected changed files from the newsletter pass: `index.html`, `styles.css`, `script.js`, `.ai/STATE.md`, `.ai/sessions/2026-06-25_10-33_codex_newsletter_landing.md`, `.ai/sessions/2026-06-25_11-31_codex_map_texture_background.md`, `.ai/sessions/2026-06-25_11-51_codex_github_initial_push.md`, `docs/superpowers/specs/2026-06-25-newsletter-landing-page-design.md`, and `docs/superpowers/plans/2026-06-25-newsletter-landing-page.md`.
 - Do not overwrite: `Market Street AI - standalone (1).html`.
 
 ## Verification status
 
-- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; GitHub repo existed empty before push; `git push -u origin main` succeeded.
+- Passing: startup docs read; `node --check script.js`; local server returned `HTTP/1.0 200 OK`; browser loaded `http://localhost:8099/` with correct title and rendered newsletter heading; favicon 404 fixed; mobile browser snapshot showed stacked layout without horizontal overflow in visible boxes; form hooks and submit behavior confirmed by static DOM/script check; background image file exists and returns `HTTP/1.0 200 OK` from the local preview server; bio image exists and returns `HTTP/1.0 200 OK`; browser snapshot confirms the operator section includes `img "Mike Miller, Spark AI"`; GitHub repo existed empty before push; `git push -u origin main` succeeded.
 - Not yet verified: real email-provider submission; deployed-host rendering; social preview card; compressed production background asset.
 
 ## Next action

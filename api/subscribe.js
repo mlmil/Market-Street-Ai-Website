@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   }
 
   const bdHeaders = {
-    Authorization: *** ${process.env.BUTTONDOWN_API_TOKEN}`,
+    Authorization: `Token ${process.env.BUTTONDOWN_API_TOKEN}`,
     "Content-Type": "application/json",
   };
 

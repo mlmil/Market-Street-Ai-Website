@@ -31,13 +31,20 @@
           <h1>805 AI News &amp; Moves</h1>
           <p class="hero-lede">Practical AI-powered weekly playbooks and insights for the Ventura and Oxnard business community.</p>
 
-          <form class="signup-form" id="newsletter-form" action="#" method="post">
+          <form
+            class="signup-form"
+            id="newsletter-form"
+            action="https://buttondown.email/api/emails/embed-subscribe/[PUT_YOUR_BUTTONDOWN_HANDLE_HERE]"
+            method="post"
+            target="popupwindow"
+            onsubmit="window.open('https://buttondown.email/[PUT_YOUR_BUTTONDOWN_HANDLE_HERE]', 'popupwindow')"
+          >
             <label for="email">Join the newsletter</label>
             <div class="signup-row">
               <input id="email" name="email" type="email" autocomplete="email" placeholder="you@business.com" required>
               <button class="button" type="submit">Get The Brief</button>
             </div>
-            <p class="form-note" id="form-status" role="status" aria-live="polite">Weekly. Local. Built for practical business use.</p>
+            <p class="form-note" id="form-status">Weekly. Local. Built for practical business use.</p>
           </form>
         </div>
 

@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-25 15:20 PDT
+Last updated: 2026-06-25 15:35 PDT
 Updated by: Blue Rose
 
 ## Status
@@ -12,10 +12,12 @@ Updated by: Blue Rose
 - Background image compressed from 14 MB to 716 KB; CSS references the compressed version.
 - Local Git repository on branch `main`, pushed to GitHub.
 - All changes committed and pushed.
+- Site deployed to Vercel at `https://market-street-ai-website-smoky.vercel.app`.
+- `.gitignore` added to protect `newsletter/` folder (contains Buttondown API token) from being committed.
 
 ## Active objective
 
-- Deploy the newsletter landing page to a public host and test a real signup end-to-end.
+- Test a real signup from the deployed URL and verify social preview rendering.
 
 ## Current facts
 
@@ -30,6 +32,8 @@ Updated by: Blue Rose
 - Social preview image: `Logos/social-preview.png` (1200x630, 384 KB).
 - Operator image: `Biopics/mikes-bio-pic-master-small.jpg`.
 - Header logo: `Logos/white.png`.
+- Vercel project: `mlmils-projects/market-street-ai-website`.
+- Production URL: `https://market-street-ai-website-smoky.vercel.app`.
 
 ## Decisions in force
 
@@ -39,30 +43,29 @@ Updated by: Blue Rose
 - Dark industrial/orange Market Street AI visual direction.
 - Ventura map texture behind dark overlays for local context.
 - Compressed background replaces original in CSS; original kept on disk for reference.
+- Deploy to Vercel; future pushes auto-deploy via Vercel Git integration if connected.
 
 ## Blockers / risks
 
 - Buttondown has Cloudflare Turnstile captcha on the embed endpoint — subscribers will see a verification challenge. Expected but may reduce conversion.
 - Newsletter name on Buttondown has typos ("Ai" not "AI", "NEwsletter") — should be cleaned up in Buttondown settings.
-- Not deployed to a public host yet — the page only works locally or if served from the repo.
-- No deployment target chosen (GitHub Pages, Netlify, Vercel, etc.).
-- Untracked files not yet committed: `newsletter/` folder (Buttondown prompt + content drafts), `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`.
+- `newsletter/` folder is .gitignored but was included in the Vercel deploy (Vercel uploads all files, not just tracked ones). The API token is on the private Vercel deployment — low risk but should be excluded via `.vercelignore`.
+- Vercel deployment is not yet connected to the Git repo for auto-deploys.
 
 ## Working tree
 
-- Latest commit: `9619da1` (`Add social preview metadata, compress background image`) pushed to `origin/main`.
+- Latest commit: `9228c03` (`Add .gitignore for newsletter API tokens and working files`) pushed to `origin/main`.
 - All tracked changes are committed and pushed.
-- Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `Biopics/biopic small.af~lock~`, `prompts/.md.md`.
 - Do not overwrite: `Market Street AI - standalone (1).html`.
 
 ## Verification status
 
-- Passing: No placeholder handle remains; Buttondown embed endpoint returns subscription verification page (HTTP 200 with Turnstile); local server returns HTTP 200; OG and Twitter Card meta tags present in served HTML; social preview image serves at HTTP 200 (384 KB); compressed background serves at HTTP 200 (716 KB); `node --check script.js` passed; no `preventDefault` or fake submit listener remains.
-- Not yet verified: real end-to-end signup from a browser (Turnstile captcha blocks automated test); deployed-host rendering; social preview rendering on actual social platforms.
+- Passing: No placeholder handle remains; Buttondown embed endpoint returns subscription verification page (HTTP 200 with Turnstile); local server returns HTTP 200; deployed Vercel URL returns HTTP 200; OG and Twitter Card meta tags present in deployed HTML; social preview image serves at HTTP 200 (384 KB); compressed background serves at HTTP 200 (716 KB); `node --check script.js` passed; no `preventDefault` or fake submit listener remains.
+- Not yet verified: real end-to-end signup from a browser (Turnstile captcha blocks automated test); social preview rendering on actual social platforms.
 
 ## Next action
 
-1. Choose a deployment target (GitHub Pages, Netlify, Vercel) and deploy.
-2. Test a real signup from the deployed URL.
-3. Clean up the Buttondown newsletter name/description in account settings.
-4. Decide whether to commit the `newsletter/` folder (contains API token — may want to .gitignore it).
+1. Test a real signup from `https://market-street-ai-website-smoky.vercel.app` in a browser.
+2. Add a `.vercelignore` to exclude `newsletter/` from future Vercel deploys.
+3. Connect the Vercel project to the GitHub repo for auto-deploys on push.
+4. Clean up the Buttondown newsletter name/description in account settings.

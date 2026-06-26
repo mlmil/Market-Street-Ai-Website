@@ -879,3 +879,43 @@ input {
 .issue-body p {
   margin: 0 0 12px;
 }
+
+/* Playbooks page */
+.playbook-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.playbook-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid rgba(198, 93, 34, 0.28);
+  margin-bottom: 16px;
+  display: block;
+  filter: contrast(1.02) brightness(0.95);
+  transition: filter 0.2s ease;
+}
+
+.playbook-card a:hover .playbook-preview {
+  filter: contrast(1.06) brightness(1.05);
+}
+
+.playbook-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+.playbook-coming-soon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.playbook-coming-soon .button {
+  margin-top: 20px;
+  text-decoration: none;
+}

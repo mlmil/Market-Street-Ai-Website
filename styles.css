@@ -324,8 +324,42 @@ input {
 }
 
 .value-strip article {
-  min-height: 190px;
+  min-height: 260px;
   padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.value-strip article.has-link {
+  padding: 26px 28px;
+}
+
+.value-strip article.has-link h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.value-strip article.has-link p {
+  font-size: 17px;
+  line-height: 1.5;
+  color: rgba(233, 200, 160, 0.82);
+}
+
+.value-strip article.has-link .read-more {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--accent);
+  font-family: Oswald, Inter, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.value-strip article.has-link .read-more:hover {
+  color: #ee8740;
 }
 
 .value-strip span,
@@ -348,6 +382,15 @@ input {
 .value-strip h2 {
   font-size: 30px;
   line-height: 1.05;
+}
+
+.value-strip h2 a {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.value-strip h2 a:hover {
+  color: var(--accent);
 }
 
 .value-strip p,
@@ -593,5 +636,116 @@ input {
   .site-footer {
     font-size: 12px;
     line-height: 1.5;
+  }
+}
+
+/* Recent Issues section */
+.recent-issues {
+  padding: 0 22px 14px;
+}
+
+.recent-issues-heading {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 4px;
+}
+
+.recent-issues-heading h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  font-family: Oswald, Inter, sans-serif;
+  text-transform: uppercase;
+}
+
+.recent-issues-heading span {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  font-family: Oswald, Inter, sans-serif;
+  text-transform: uppercase;
+}
+
+.recent-grid {
+  padding-top: 22px;
+}
+
+.recent-issue {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-issue details {
+  margin-top: auto;
+}
+
+.recent-issue summary {
+  display: inline-block;
+  margin-top: 14px;
+  padding-top: 14px;
+  color: var(--accent);
+  font-family: Oswald, Inter, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  border-top: 1px solid var(--line-soft);
+  transition: color 0.2s ease;
+  list-style: none;
+}
+
+.recent-issue summary::-webkit-details-marker {
+  display: none;
+}
+
+.recent-issue summary:hover {
+  color: #ee8740;
+}
+
+.recent-issue summary::after {
+  content: " \2192";
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.recent-issue details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.recent-issue details[open] summary {
+  border-bottom: 1px solid var(--line-soft);
+  padding-bottom: 14px;
+}
+
+.issue-body {
+  padding-top: 16px;
+  max-height: 500px;
+  overflow-y: auto;
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(233, 200, 160, 0.82);
+}
+
+.issue-body h4 {
+  margin: 18px 0 8px;
+  color: var(--accent);
+  font-size: 16px;
+  font-family: Oswald, Inter, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.issue-body p {
+  margin: 0 0 12px;
+}
+
+@media (max-width: 980px) {
+  .recent-grid {
+    grid-template-columns: 1fr;
   }
 }

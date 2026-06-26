@@ -1113,3 +1113,42 @@ input {
     gap: 0 16px;
   }
 }
+
+/* Fix top nav links - spacing and animated underline */
+.main-nav a {
+  display: inline-block;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .main-nav {
+    gap: 24px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-nav {
+    gap: 16px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

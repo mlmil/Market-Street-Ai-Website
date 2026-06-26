@@ -1,87 +1,92 @@
 # Project State
 
-Last updated: 2026-06-25 16:15 PDT
+Last updated: 2026-06-25 22:30 PDT
 Updated by: Blue Rose
 
 ## Status
 
 - Homepage is a focused newsletter landing page for "805 AI News & Moves".
-- Newsletter promise: "Practical AI-powered weekly playbooks and insights for the Ventura and Oxnard business community."
-- Signup form uses a Vercel serverless function (`/api/subscribe`) to proxy subscriptions to the Buttondown API. No cross-origin issues, no captcha, users stay on the site.
-- Double-opt-in flow: subscriber created as unactivated -> send-reminder triggers confirmation email -> after confirming, welcome email sent automatically.
-- Social preview metadata (Open Graph + Twitter Card) added with a generated 1200x630 preview image.
-- Background image compressed from 14 MB to 716 KB; CSS references the compressed version.
-- Local Git repository on branch `main`, pushed to GitHub.
-- All changes committed and pushed.
+- Newsletter signup form uses Vercel serverless function (`/api/subscribe`) to proxy to Buttondown API.
+- Double-opt-in flow: subscriber created as unactivated → send-reminder triggers confirmation email → after confirming, welcome email sent.
+- Social preview metadata (Open Graph + Twitter Card) with generated 1200x630 preview image.
+- Background image: 2400px JPEG (1.4 MB) — `Can_you_recreate_this_in_202605091921_v2.jpeg`. DO NOT CHANGE.
 - Site deployed to Vercel at `https://market-street-ai-website-smoky.vercel.app`.
-- `.gitignore` and `.vercelignore` added to protect `newsletter/` folder (contains Buttondown API token).
-- Buttondown `auditing_mode` set to `disabled` (was `aggressive`, blocking legitimate signups).
-- Buttondown `subscription_redirect_url` set to the Vercel URL.
-- Buttondown confirmation and welcome emails configured via API (custom_subscription_confirmation_email_* and custom_subscription_confirmed_email_*).
-- Buttondown email CSS updated to use Lora font (closest free web font to Claude's Galaxie Copernicus).
-- Buttondown account is UNDER REVIEW (disabled). Cannot send emails until approved. Created today, pending human review at Buttondown.
+- Buttondown account UNDER REVIEW (disabled) — cannot send emails until approved.
+- Buttondown email CSS set to Lora font. Confirmation and welcome emails configured via API.
+- Buttondown auditing_mode set to disabled.
 
-## Active objective
+## Pages
 
-- Wait for Buttondown account approval, then test the full email flow end-to-end.
-- Mike wants to make changes to the landing page (will be done in a new chat).
+- **index.html** — Homepage with newsletter signup, value strip, Recent Issues (6 cards), What You Get section
+- **playbooks.html** — 4 playbooks: Construction, Professional Services, Home Care, Home Services (preview images + Google Drive download links)
+- **gpts.html** — 2 GPTs: Ventura Business Dashboard Builder, Ventura County Business Context Builder (links to ChatGPT) + 1 placeholder
+- **manifesto.html** — Full 8-principles manifesto, Lora serif, $400/month updated, closing box with Mike's signature
+
+## Navigation
+
+- Main nav: AI Playbooks → GPTs & Templates → Manifesto → Recent Issues
+- Operator section REMOVED from nav and page
+- Animated underline on nav link hover (orange line slides in from left)
+- Value strip on homepage: AI Playbooks (linked), Custom GPTs & Templates (linked), By Mike (Substack link)
+
+## Recent Issues (6 cards in one grid)
+
+1. Agent Versus Chat (Philosophy) — expandable full article
+2. The Power of the Little Fires (Strategy) — expandable full article
+3. The Greatest AI Skill Nobody Talks About (Judgment) — expandable full article
+4. Turn missed calls into follow-up tasks (Tool)
+5. Audit your front desk questions (Local Move)
+6. Do not automate trust away (Watch)
 
 ## Current facts
 
-- Main prototype: `Market Street AI - standalone (1).html` (unchanged reference).
-- Live editable static site files: `index.html`, `styles.css`, `script.js`.
-- Serverless function: `api/subscribe.js` — proxies subscription requests to Buttondown API with double-opt-in flow.
-- Remote: `https://github.com/mlmil/Market-Street-Ai-Website.git`.
-- Buttondown handle: `mikemllr77`.
-- Buttondown API token stored as Vercel environment variable `BUTTONDOWN_API_TOKEN`.
-- Signup flow: form JS fetch -> `/api/subscribe` -> Buttondown API creates unactivated subscriber + sends confirmation email -> user clicks confirm link -> welcome email sent -> redirect back to Vercel site.
-- Vercel project: `mlmils-projects/market-street-ai-website`.
-- Production URL: `https://market-street-ai-website-smoky.vercel.app`.
-- Compressed background: `Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921_compressed.jpeg` (716 KB).
-- Social preview image: `Logos/social-preview.png` (1200x630, 384 KB).
-- Operator image: `Biopics/mikes-bio-pic-master-small.jpg`.
-- Header logo: `Logos/white.png`.
+- Remote: `https://github.com/mlmil/Market-Street-Ai-Website.git`
+- Buttondown handle: `mikemllr77`
+- Buttondown API token: Vercel env var `BUTTONDOWN_API_TOKEN`
+- Vercel project: `mlmils-projects/market-street-ai-website`
+- Background image (DO NOT CHANGE): `Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921_v2.jpeg` (2400px, 1.4 MB)
+- Original background (14 MB, on disk only, not referenced): `...Can_you_recreate_this_in_202605091921.jpeg`
+- First compressed background (1920px, too zoomed, not referenced): `...Can_you_recreate_this_in_202605091921_compressed.jpeg`
+
+## CSS notes
+
+- Duplicate media query blocks were cleaned up (removed ~111 lines of duplicated CSS)
+- `.site-header` retains its original panel styling (dark background, border, shadow)
+- Nav animated underline added via `.main-nav a::after` pseudo-element
+- `.gpt-card` and `.playbook-card` have dedicated CSS for consistent card styling
+- `.issue-body` provides scrollable expandable content for Recent Issues articles
 
 ## Decisions in force
 
 - Keep `Market Street AI - standalone (1).html` unchanged as the visual reference.
-- Use clean static files for the editable site: `index.html`, `styles.css`, `script.js`.
-- Newsletter-first landing page; Spark AI visible as operator without hard sales pitch.
+- Newsletter-first landing page; Spark AI visible without hard sales pitch.
 - Dark industrial/orange Market Street AI visual direction.
-- Ventura map texture behind dark overlays for local context.
-- Compressed background replaces original in CSS; original kept on disk for reference.
 - Deploy to Vercel with serverless API proxy for subscriptions.
-- Buttondown auditing disabled to allow API-based signups without firewall blocks.
-- Double-opt-in flow (unactivated -> confirmation email -> welcome email) rather than auto-activating subscribers.
-- Lora font for Buttondown emails (closest free match to Claude's Galaxie Copernicus).
+- Double-opt-in flow for subscribers.
+- Lora font for Buttondown emails.
+- Background image is the 2400px v2 version — DO NOT CHANGE.
+- Operator section removed per user request.
 
-## Blockers / risks
+## Blockers
 
-- **BUTTONDOWN ACCOUNT UNDER REVIEW (disabled)** — cannot send any emails until approved. Created 2026-06-25, pending human review. This blocks: confirmation emails, welcome emails, newsletter sends.
-- No custom domain yet — site lives at `market-street-ai-website-smoky.vercel.app`.
-- Vercel deployment is not yet connected to the GitHub repo for auto-deploys.
-- `BUTTONDOWN_API_TOKEN` is a sensitive env var on Vercel — not in the repo.
-- Buttondown newsletter name has typos in account settings ("Ai" not "AI", "NEwsletter") — should be cleaned up.
-- Email CSS uses `@import` for Google Fonts Lora — some email clients (Gmail web, Outlook) don't support `@import` and will fall back to Georgia.
-- The `api/subscribe.js` file contains a template literal with the Buttondown auth header that some tools redact as `***` in display — the actual file on disk and in Git is correct (verified with `node --check` and `xxd`).
+- **BUTTONDOWN ACCOUNT UNDER REVIEW (disabled)** — cannot send emails until approved. Pending human review at Buttondown.
+- No custom domain yet.
+- Vercel not connected to GitHub for auto-deploys.
+- Buttondown newsletter name has typos in account settings.
+- Playbooks page missing Cleaning and Staffing playbooks (were added then lost in revert). Playbook PNG files still on disk in `playbooks/` folder.
 
 ## Working tree
 
-- Latest commit: `c0d59a0` (`Fix template literal syntax in subscribe function`) pushed to `origin/main`.
-- All tracked changes are committed and pushed.
-- Untracked (gitignored): `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `prompts/.md.md`, `prompts/handoff.md`.
-- Do not overwrite: `Market Street AI - standalone (1).html`.
-
-## Verification status
-
-- Passing: `/api/subscribe` returns 200 with `{"success": true}` for valid new email; subscriber created as `unactivated` type; `send-reminder` API returns 200; duplicate email handled gracefully; invalid email returns 400; production site serves at HTTP 200 with form and JS handler present; compressed background and social preview image serve at 200; OG/Twitter meta tags present in deployed HTML; Buttondown confirmation and welcome email content configured; Buttondown CSS updated to Lora font.
-- Not yet verified: actual email delivery (blocked by Buttondown account review); social preview rendering on actual social platforms; deployed custom domain.
+- Latest commit: `b06ad12` (Use 2400px background)
+- All tracked changes committed and pushed.
+- Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
+- Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. **Wait for Buttondown account approval** — check email for approval notification, or log into https://buttondown.com/mikemllr77 and look for the review banner to disappear.
-2. Once approved: test a real signup from `https://market-street-ai-website-smoky.vercel.app` and verify confirmation + welcome emails arrive.
-3. Clean up the Buttondown newsletter name/description in account settings.
-4. Connect Vercel project to GitHub repo for auto-deploys on push.
-5. Optionally set up a custom domain in Vercel.
-6. Mike wants to make landing page design changes in a new chat.
+1. Wait for Buttondown account approval.
+2. Once approved: test real signup, verify confirmation + welcome emails.
+3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
+4. Clean up Buttondown newsletter name typos.
+5. Optionally connect Vercel to GitHub for auto-deploys.
+6. Optionally set up custom domain.

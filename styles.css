@@ -73,7 +73,8 @@ input {
 .site-header,
 .hero,
 .value-strip article,
-.sample-section,
+ .sample-section,
+.recent-issues,
 .operator-note,
 .issue-card {
   background: var(--panel);
@@ -641,7 +642,7 @@ input {
 
 /* Recent Issues section */
 .recent-issues {
-  padding: 0 22px 14px;
+  padding: 0 22px 24px;
 }
 
 .recent-issues-heading {
@@ -678,6 +679,21 @@ input {
 .recent-issue {
   display: flex;
   flex-direction: column;
+  min-height: 220px;
+}
+
+.recent-grid article {
+  min-height: 220px;
+  padding: 20px;
+  background: rgba(8, 15, 17, 0.72);
+  border: 1px solid rgba(198, 93, 34, 0.28);
+  border-radius: 4px;
+}
+
+.recent-grid article.recent-issue {
+  background: rgba(8, 15, 17, 0.72);
+  border: 1px solid rgba(198, 93, 34, 0.28);
+  border-radius: 4px;
 }
 
 .recent-issue details {

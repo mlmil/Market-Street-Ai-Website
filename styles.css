@@ -38,7 +38,7 @@ body::before {
   background:
     linear-gradient(rgba(5, 8, 9, 0.5), rgba(5, 8, 9, 0.68)),
     radial-gradient(circle at 52% 0%, rgba(224, 119, 45, 0.1), transparent 34%),
-    url("Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921.jpeg") center / cover no-repeat;
+    url("Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921_v2.jpeg") center / cover no-repeat;
 }
 
 body::after {
@@ -143,7 +143,7 @@ input {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(7, 13, 15, 0.82), rgba(7, 13, 15, 0.64)),
-    url("Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921.jpeg") center / cover no-repeat;
+    url("Assets /Market Street Ai Website/market street AI web page on progress/Can_you_recreate_this_in_202605091921_v2.jpeg") center / cover no-repeat;
 }
 
 .hero::after {

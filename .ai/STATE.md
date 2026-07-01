@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-01 00:41 PDT
+Last updated: 2026-07-01 00:44 PDT
 Updated by: Codex
 
 ## Status
@@ -18,6 +18,7 @@ Updated by: Codex
 - Video panel now includes thumbnails in each row.
 - Hero video panel now features one weekly video with Mike's summary underneath.
 - Featured video thumbnail now crops out YouTube letterbox padding.
+- Featured video thumbnail now uses YouTube `maxresdefault.jpg` without manual scale-up.
 
 ## Pages
 
@@ -48,7 +49,7 @@ Updated by: Codex
 - Primary video: `The Winners and Losers of the AI Revolution | Tyler Cowen [ARC 2026]`
 - URL: `https://www.youtube.com/watch?v=hfZWfkQR9zs&t=333s`
 - Secondary links are YouTube searches for practical AI small business and AI agents/business workflows.
-- First video uses the real YouTube thumbnail from `https://i.ytimg.com/vi/hfZWfkQR9zs/hqdefault.jpg`.
+- First video uses the real YouTube thumbnail from `https://i.ytimg.com/vi/hfZWfkQR9zs/maxresdefault.jpg`.
 - Former secondary hero link `Practical AI for small business` moved to the Recent Issues `Watch` card.
 
 ## Current facts
@@ -91,7 +92,7 @@ Updated by: Codex
 ## Working tree
 
 - Latest commit: `b06ad12` (Use 2400px background)
-- Latest pending content update wraps the featured YouTube thumbnail in a 16:9 crop frame to remove visible top/bottom bars.
+- Latest pending content update switches the featured YouTube thumbnail from padded `hqdefault.jpg` to 16:9 `maxresdefault.jpg` and removes manual scale-up.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 

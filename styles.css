@@ -358,7 +358,6 @@ input {
   display: block;
   object-fit: cover;
   object-position: center center;
-  transform: scale(1.22);
 }
 
 .featured-video span,

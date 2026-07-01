@@ -316,6 +316,25 @@ input {
   line-height: 1.35;
 }
 
+.issue-card li a {
+  display: grid;
+  gap: 6px;
+  align-self: center;
+}
+
+.issue-card li a:hover strong {
+  color: var(--accent);
+}
+
+.issue-card li small {
+  color: var(--dim);
+  font-family: Oswald, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .value-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

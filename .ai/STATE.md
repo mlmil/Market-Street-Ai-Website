@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-30 22:52 PDT
+Last updated: 2026-06-30 23:36 PDT
 Updated by: Codex
 
 ## Status
@@ -14,6 +14,7 @@ Updated by: Codex
 - Buttondown setup reported complete by Mike on 2026-06-30.
 - Buttondown email CSS set to Lora font. Confirmation and welcome emails configured via API.
 - Buttondown auditing_mode set to disabled.
+- Hero side card changed from "Next Issue" to a "Worth Watching" YouTube video panel.
 
 ## Pages
 
@@ -37,6 +38,13 @@ Updated by: Codex
 4. Turn missed calls into follow-up tasks (Tool)
 5. Audit your front desk questions (Local Move)
 6. Do not automate trust away (Watch)
+
+## Hero Video Panel
+
+- Header: `Worth Watching` / `YouTube`
+- Primary video: `The Winners and Losers of the AI Revolution | Tyler Cowen [ARC 2026]`
+- URL: `https://www.youtube.com/watch?v=hfZWfkQR9zs&t=333s`
+- Secondary links are YouTube searches for practical AI small business and AI agents/business workflows.
 
 ## Current facts
 
@@ -78,14 +86,15 @@ Updated by: Codex
 ## Working tree
 
 - Latest commit: `b06ad12` (Use 2400px background)
-- All tracked changes committed and pushed.
+- Latest pending content update changes the hero side card to a linked YouTube watchlist.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
-2. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
-3. Clean up Buttondown newsletter name typos.
-4. Optionally connect Vercel to GitHub for auto-deploys.
-5. Optionally set up custom domain.
+1. Commit and push the hero video panel update.
+2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
+3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
+4. Clean up Buttondown newsletter name typos.
+5. Optionally connect Vercel to GitHub for auto-deploys.
+6. Optionally set up custom domain.

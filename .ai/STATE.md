@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-30 23:47 PDT
+Last updated: 2026-07-01 00:41 PDT
 Updated by: Codex
 
 ## Status
@@ -17,6 +17,7 @@ Updated by: Codex
 - Hero side card changed from "Next Issue" to a "Worth Watching" YouTube video panel.
 - Video panel now includes thumbnails in each row.
 - Hero video panel now features one weekly video with Mike's summary underneath.
+- Featured video thumbnail now crops out YouTube letterbox padding.
 
 ## Pages
 
@@ -90,7 +91,7 @@ Updated by: Codex
 ## Working tree
 
 - Latest commit: `b06ad12` (Use 2400px background)
-- Latest pending content update changes the hero video panel to one featured video plus summary and moves the practical AI YouTube search link into the `Watch` card.
+- Latest pending content update wraps the featured YouTube thumbnail in a 16:9 crop frame to remove visible top/bottom bars.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 

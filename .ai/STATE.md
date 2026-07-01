@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-01 01:22 PDT
+Last updated: 2026-07-01 02:37 PDT
 Updated by: Codex
 
 ## Status
@@ -23,12 +23,13 @@ Updated by: Codex
 - Custom GPTs & Templates homepage box now says the tools are made for the Ventura and Oxnard communities.
 - GPTs page now includes Ventura County Content Engine as a live ChatGPT link.
 - GPT card buttons are aligned flush to the bottom of each card.
+- GPTs page now includes AI Pre-Op Onboarding Tool as a live ChatGPT link.
 
 ## Pages
 
 - **index.html** — Homepage with newsletter signup, value strip, Recent Issues (6 cards), What You Get section
 - **playbooks.html** — 4 playbooks: Construction, Professional Services, Home Care, Home Services (preview images + Google Drive download links)
-- **gpts.html** — 2 GPTs: Ventura Business Dashboard Builder, Ventura County Content Engine (links to ChatGPT) + 1 placeholder
+- **gpts.html** — 3 GPTs: Ventura Business Dashboard Builder, Ventura County Content Engine, AI Pre-Op Onboarding Tool (links to ChatGPT)
 - **manifesto.html** — Full 8-principles manifesto, Lora serif, $400/month updated, closing box with Mike's signature
 
 ## Navigation
@@ -97,14 +98,14 @@ Updated by: Codex
 
 ## Working tree
 
-- Latest commit: `0f1b847` (Add Ventura County Content Engine GPT)
-- Latest pending content update aligns GPT card buttons to the bottom.
+- Latest commit: `1c75510` (Align GPT card buttons)
+- Latest pending content update adds AI Pre-Op Onboarding Tool to gpts.html.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Commit and push the GPT card button alignment fix.
+1. Commit and push the AI Pre-Op Onboarding Tool GPT card.
 2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
 3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
 4. Clean up Buttondown newsletter name typos.

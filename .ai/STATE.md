@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-01 00:47 PDT
+Last updated: 2026-07-01 00:58 PDT
 Updated by: Codex
 
 ## Status
@@ -20,6 +20,7 @@ Updated by: Codex
 - Featured video thumbnail now crops out YouTube letterbox padding.
 - Featured video thumbnail now uses YouTube `maxresdefault.jpg` without manual scale-up.
 - Manifesto link moved from the top navigation to footer fine print.
+- Custom GPTs & Templates homepage box now says the tools are made for the Ventura and Oxnard communities.
 
 ## Pages
 
@@ -93,14 +94,14 @@ Updated by: Codex
 
 ## Working tree
 
-- Latest commit: `e9b0dc8` (Use maxres video thumbnail)
-- Latest pending content update moves the Manifesto link from the top navigation to footer fine print.
+- Latest commit: `2e02353` (Move manifesto link to footer)
+- Latest pending content update revises the Custom GPTs & Templates value-strip description for Ventura and Oxnard communities.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Commit and push the Manifesto footer navigation update.
+1. Commit and push the Custom GPTs & Templates copy update.
 2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
 3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
 4. Clean up Buttondown newsletter name typos.

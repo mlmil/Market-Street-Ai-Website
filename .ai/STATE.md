@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-01 00:44 PDT
+Last updated: 2026-07-01 00:47 PDT
 Updated by: Codex
 
 ## Status
@@ -19,6 +19,7 @@ Updated by: Codex
 - Hero video panel now features one weekly video with Mike's summary underneath.
 - Featured video thumbnail now crops out YouTube letterbox padding.
 - Featured video thumbnail now uses YouTube `maxresdefault.jpg` without manual scale-up.
+- Manifesto link moved from the top navigation to footer fine print.
 
 ## Pages
 
@@ -29,7 +30,8 @@ Updated by: Codex
 
 ## Navigation
 
-- Main nav: AI Playbooks → GPTs & Templates → Manifesto → Recent Issues
+- Main nav: AI Playbooks → GPTs & Templates → Recent Issues
+- Footer fine print includes Manifesto link.
 - Operator section REMOVED from nav and page
 - Animated underline on nav link hover (orange line slides in from left)
 - Value strip on homepage: AI Playbooks (linked), Custom GPTs & Templates (linked), By Mike (Substack link)
@@ -91,14 +93,14 @@ Updated by: Codex
 
 ## Working tree
 
-- Latest commit: `b06ad12` (Use 2400px background)
-- Latest pending content update switches the featured YouTube thumbnail from padded `hqdefault.jpg` to 16:9 `maxresdefault.jpg` and removes manual scale-up.
+- Latest commit: `e9b0dc8` (Use maxres video thumbnail)
+- Latest pending content update moves the Manifesto link from the top navigation to footer fine print.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Commit and push the featured-video hero panel update.
+1. Commit and push the Manifesto footer navigation update.
 2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
 3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
 4. Clean up Buttondown newsletter name typos.

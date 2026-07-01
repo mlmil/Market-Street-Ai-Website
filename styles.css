@@ -338,6 +338,48 @@ input {
   text-transform: uppercase;
 }
 
+.featured-video {
+  display: grid;
+  gap: 10px;
+  padding-top: 18px;
+}
+
+.featured-video img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(198, 93, 34, 0.38);
+  border-radius: 3px;
+}
+
+.featured-video span,
+.featured-video small {
+  color: var(--dim);
+  font-family: Oswald, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.featured-video strong {
+  color: rgba(233, 200, 160, 0.95);
+  font-size: 20px;
+  line-height: 1.18;
+}
+
+.featured-video:hover strong,
+.sample-grid h3 a:hover {
+  color: var(--accent);
+}
+
+.video-summary {
+  margin: 16px 0 0;
+  color: rgba(233, 200, 160, 0.82);
+  font-size: 15px;
+  line-height: 1.52;
+}
+
 .issue-card li img,
 .video-thumb {
   width: 92px;

@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-01 01:17 PDT
+Last updated: 2026-07-01 01:22 PDT
 Updated by: Codex
 
 ## Status
@@ -22,6 +22,7 @@ Updated by: Codex
 - Manifesto link moved from the top navigation to footer fine print.
 - Custom GPTs & Templates homepage box now says the tools are made for the Ventura and Oxnard communities.
 - GPTs page now includes Ventura County Content Engine as a live ChatGPT link.
+- GPT card buttons are aligned flush to the bottom of each card.
 
 ## Pages
 
@@ -72,6 +73,7 @@ Updated by: Codex
 - `.site-header` retains its original panel styling (dark background, border, shadow)
 - Nav animated underline added via `.main-nav a::after` pseudo-element
 - `.gpt-card` and `.playbook-card` have dedicated CSS for consistent card styling
+- `.gpt-card .button` uses `margin-top: auto` so card buttons align to the bottom.
 - `.issue-body` provides scrollable expandable content for Recent Issues articles
 
 ## Decisions in force
@@ -95,14 +97,14 @@ Updated by: Codex
 
 ## Working tree
 
-- Latest commit: `1db7d1b` (Update GPT templates local copy)
-- Latest pending content update adds Ventura County Content Engine to gpts.html.
+- Latest commit: `0f1b847` (Add Ventura County Content Engine GPT)
+- Latest pending content update aligns GPT card buttons to the bottom.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Commit and push the Ventura County Content Engine GPT card.
+1. Commit and push the GPT card button alignment fix.
 2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
 3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
 4. Clean up Buttondown newsletter name typos.

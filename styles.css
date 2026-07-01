@@ -574,6 +574,17 @@ input {
   border-radius: 4px;
 }
 
+.gpt-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.gpt-card .button {
+  align-self: flex-start;
+  margin-top: auto;
+  text-decoration: none;
+}
+
 .sample-grid h3 {
   margin: 14px 0 0;
   color: rgba(233, 200, 160, 0.96);

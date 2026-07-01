@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-01 02:58 PDT
+Last updated: 2026-07-01 03:27 PDT
 Updated by: Codex
 
 ## Status
@@ -24,13 +24,13 @@ Updated by: Codex
 - GPTs page now includes Ventura County Content Engine as a live ChatGPT link.
 - GPT card buttons are aligned flush to the bottom of each card.
 - GPTs page now includes AI Pre-Op Onboarding Tool as a live ChatGPT link.
-- GPTs page now includes 805 AI Automation Checkup as a live ChatGPT link.
+- GPTs page now includes 805 AI Readiness Check-Up as a live ChatGPT link.
 
 ## Pages
 
 - **index.html** — Homepage with newsletter signup, value strip, Recent Issues (6 cards), What You Get section
 - **playbooks.html** — 4 playbooks: Construction, Professional Services, Home Care, Home Services (preview images + Google Drive download links)
-- **gpts.html** — 4 GPTs: Ventura Business Dashboard Builder, Ventura County Content Engine, AI Pre-Op Onboarding Tool, 805 AI Automation Checkup (links to ChatGPT)
+- **gpts.html** — 4 GPTs: Ventura Business Dashboard Builder, Ventura County Content Engine, AI Pre-Op Onboarding Tool, 805 AI Readiness Check-Up (links to ChatGPT)
 - **manifesto.html** — Full 8-principles manifesto, Lora serif, $400/month updated, closing box with Mike's signature
 
 ## Navigation
@@ -99,14 +99,14 @@ Updated by: Codex
 
 ## Working tree
 
-- Latest commit: `d272077` (Add AI Pre-Op Onboarding GPT)
-- Latest pending content update adds 805 AI Automation Checkup to gpts.html.
+- Latest commit: `cac9a69` (Add 805 AI Automation Checkup GPT)
+- Latest pending content update replaces 805 AI Automation Checkup with 805 AI Readiness Check-Up in gpts.html.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Commit and push the 805 AI Automation Checkup GPT card.
+1. Commit and push the 805 AI Readiness Check-Up GPT replacement.
 2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
 3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
 4. Clean up Buttondown newsletter name typos.

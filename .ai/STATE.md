@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-30 23:36 PDT
+Last updated: 2026-06-30 23:39 PDT
 Updated by: Codex
 
 ## Status
@@ -15,6 +15,7 @@ Updated by: Codex
 - Buttondown email CSS set to Lora font. Confirmation and welcome emails configured via API.
 - Buttondown auditing_mode set to disabled.
 - Hero side card changed from "Next Issue" to a "Worth Watching" YouTube video panel.
+- Video panel now includes thumbnails in each row.
 
 ## Pages
 
@@ -45,6 +46,8 @@ Updated by: Codex
 - Primary video: `The Winners and Losers of the AI Revolution | Tyler Cowen [ARC 2026]`
 - URL: `https://www.youtube.com/watch?v=hfZWfkQR9zs&t=333s`
 - Secondary links are YouTube searches for practical AI small business and AI agents/business workflows.
+- First video uses the real YouTube thumbnail from `https://i.ytimg.com/vi/hfZWfkQR9zs/hqdefault.jpg`.
+- Search-link rows use styled local placeholder thumbnails.
 
 ## Current facts
 
@@ -86,13 +89,13 @@ Updated by: Codex
 ## Working tree
 
 - Latest commit: `b06ad12` (Use 2400px background)
-- Latest pending content update changes the hero side card to a linked YouTube watchlist.
+- Latest pending content update adds thumbnails to the hero video watchlist.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Commit and push the hero video panel update.
+1. Commit and push the hero video thumbnail update.
 2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
 3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
 4. Clean up Buttondown newsletter name typos.

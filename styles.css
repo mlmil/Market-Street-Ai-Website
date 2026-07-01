@@ -318,8 +318,11 @@ input {
 
 .issue-card li a {
   display: grid;
+  grid-template-columns: 92px 1fr;
   gap: 6px;
+  column-gap: 14px;
   align-self: center;
+  align-items: center;
 }
 
 .issue-card li a:hover strong {
@@ -333,6 +336,30 @@ input {
   letter-spacing: 0.08em;
   line-height: 1.25;
   text-transform: uppercase;
+}
+
+.issue-card li img,
+.video-thumb {
+  width: 92px;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(198, 93, 34, 0.38);
+  border-radius: 3px;
+  background: rgba(8, 15, 17, 0.72);
+}
+
+.issue-card li img {
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+.video-thumb {
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-family: Oswald, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.08em;
 }
 
 .value-strip {

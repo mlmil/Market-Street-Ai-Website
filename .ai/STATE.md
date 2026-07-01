@@ -1,7 +1,7 @@
 # Project State
 
-Last updated: 2026-06-25 22:30 PDT
-Updated by: Blue Rose
+Last updated: 2026-06-30 22:52 PDT
+Updated by: Codex
 
 ## Status
 
@@ -11,7 +11,7 @@ Updated by: Blue Rose
 - Social preview metadata (Open Graph + Twitter Card) with generated 1200x630 preview image.
 - Background image: 2400px JPEG (1.4 MB) — `Can_you_recreate_this_in_202605091921_v2.jpeg`. DO NOT CHANGE.
 - Site deployed to Vercel at `https://market-street-ai-website-smoky.vercel.app`.
-- Buttondown account UNDER REVIEW (disabled) — cannot send emails until approved.
+- Buttondown setup reported complete by Mike on 2026-06-30.
 - Buttondown email CSS set to Lora font. Confirmation and welcome emails configured via API.
 - Buttondown auditing_mode set to disabled.
 
@@ -69,11 +69,11 @@ Updated by: Blue Rose
 
 ## Blockers
 
-- **BUTTONDOWN ACCOUNT UNDER REVIEW (disabled)** — cannot send emails until approved. Pending human review at Buttondown.
 - No custom domain yet.
 - Vercel not connected to GitHub for auto-deploys.
 - Buttondown newsletter name has typos in account settings.
 - Playbooks page missing Cleaning and Staffing playbooks (were added then lost in revert). Playbook PNG files still on disk in `playbooks/` folder.
+- Real subscriber flow still needs a named test email before submitting to Buttondown.
 
 ## Working tree
 
@@ -84,9 +84,8 @@ Updated by: Blue Rose
 
 ## Next action
 
-1. Wait for Buttondown account approval.
-2. Once approved: test real signup, verify confirmation + welcome emails.
-3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
-4. Clean up Buttondown newsletter name typos.
-5. Optionally connect Vercel to GitHub for auto-deploys.
-6. Optionally set up custom domain.
+1. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
+2. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
+3. Clean up Buttondown newsletter name typos.
+4. Optionally connect Vercel to GitHub for auto-deploys.
+5. Optionally set up custom domain.

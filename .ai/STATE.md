@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-02 01:03 PDT
+Last updated: 2026-07-02 01:12 PDT
 Updated by: Codex
 
 ## Status
@@ -25,7 +25,7 @@ Updated by: Codex
 - GPT card buttons are aligned flush to the bottom of each card.
 - GPTs page now includes AI Pre-Op Onboarding Tool as a live ChatGPT link.
 - GPTs page now includes 805 AI Readiness Check-Up as a live ChatGPT link.
-- Trial branch `codex/ui-ux-pro-max-trial` applies a UI/UX Pro Max polish pass to the GPTs page only.
+- Trial branch `codex/ui-ux-pro-max-trial` applies UI/UX Pro Max polish passes to the GPTs page and homepage.
 
 ## Pages
 
@@ -79,6 +79,8 @@ Updated by: Codex
 - `.gpt-card` and `.playbook-card` have dedicated CSS for consistent card styling
 - `.gpt-card .button` uses `margin-top: auto` so card buttons align to the bottom.
 - Trial branch adds `.gpts-grid` for a balanced 2x2 GPT card layout.
+- Trial branch adds homepage proof chips, stronger signup form surface, and elevated value cards.
+- Trial branch changes the homepage hero map image from `cover` to `contain` so Ventura labels and geography remain visible.
 - `.issue-body` provides scrollable expandable content for Recent Issues articles
 
 ## Decisions in force
@@ -103,13 +105,13 @@ Updated by: Codex
 ## Working tree
 
 - Latest commit on main before trial: `ae595e6` (Replace automation checkup GPT)
-- Latest pending trial update: UI/UX Pro Max polish pass on gpts.html and styles.css.
+- Latest pending trial update: UI/UX Pro Max polish pass on index.html and styles.css.
 - Untracked: `newsletter/`, `Logos/logo 2.png`, `Logos/logo1.png`, `Biopics/biopic small.af`, `playbooks/cleaning.png`, `playbooks/staffing.png`
 - Do not overwrite: `Market Street AI - standalone (1).html`
 
 ## Next action
 
-1. Review the UI/UX Pro Max GPTs page trial at `http://localhost:8099/gpts.html`.
+1. Review the UI/UX Pro Max homepage trial at `http://localhost:8099/`.
 2. Run a real signup test with a user-approved test email, then verify confirmation + welcome emails.
 3. Re-add Cleaning and Staffing playbooks to playbooks.html (PNG files already on disk).
 4. Clean up Buttondown newsletter name typos.

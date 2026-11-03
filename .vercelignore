@@ -2,3 +2,30 @@ newsletter/
 *.af
 *.af~lock~
 .DS_Store
+.playwright-cli/
+.playwright-mcp/
+.codex/
+.hermes/
+.ai/
+styles.css.backup
+Market Street AI - standalone (1).html
+
+# Internal project files (never serve publicly)
+.ai/
+.git/
+.env*
+.vercel/
+AGENTS.md
+CLAUDE.md
+HANDOFF_FROM_VACE_THREAD.md
+skill.md
+launch-codex.command
+Progress Files/
+docs/
+prompts/
+Ai Playbooks/
+Assets\ /
+Biopics/
+Content Ideas doe website/
+_backup-*/
+*.backup

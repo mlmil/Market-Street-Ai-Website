@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discovery Questionnaire — Spark AI</title>
+  <meta name="description" content="A step-by-step AI discovery questionnaire for turning scattered ideas into a focused starting scope.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050809'/%3E%3Cpath d='M13 50V14h10l9 19 9-19h10v36H40V34l-6 13h-4l-6-13v16H13Z' fill='%23e0772d'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="discovery-header">
+      <div class="spark-brand" aria-label="Spark AI">
+        <span>Spark AI</span>
+        <strong>Discovery</strong>
+      </div>
+      <p>Practical AI discovery for local operators.</p>
+    </header>
+
+    <main>
+      <section class="alignment-hero">
+        <div>
+          <p class="kicker">AI Foundation Intake</p>
+          <h1>Discovery Questionnaire</h1>
+          <p>Same intake, slower pace. One question at a time, with enough structure to keep the starting scope focused.</p>
+        </div>
+        <aside class="alignment-note">
+          <span>Best For</span>
+          <p>A guided conversation with Phil when too many AI possibilities are competing for attention.</p>
+        </aside>
+      </section>
+
+      <section class="alignment-panel wizard-panel" aria-labelledby="wizard-heading">
+        <div class="panel-heading">
+          <h2 id="wizard-heading">Questionnaire</h2>
+          <span id="wizard-progress">Step 1 of 9</span>
+        </div>
+
+        <div class="wizard-track" data-wizard-track>
+          <article class="choice-panel wizard-step is-active" data-profile-step>
+            <span>Business snapshot</span>
+            <div class="business-profile-grid wizard-profile-grid" data-business-profile>
+              <label>
+                <span>Business name</span>
+                <input type="text" data-profile-field="businessName" placeholder="Business name">
+              </label>
+              <label>
+                <span>Your position</span>
+                <input type="text" data-profile-field="position" placeholder="Owner, GM, operator, manager...">
+              </label>
+              <label>
+                <span>Staff size</span>
+                <input type="text" data-profile-field="staffSize" placeholder="Solo, 2-5, 6-15, 16-50, 50+">
+              </label>
+              <label>
+                <span>Website</span>
+                <input type="url" data-profile-field="website" placeholder="https://example.com">
+              </label>
+              <label class="wide-field">
+                <span>Current AI tools in use</span>
+                <input type="text" data-profile-field="currentAiTools" placeholder="ChatGPT, Claude, Gemini, Copilot, Canva, CRM AI, none yet...">
+              </label>
+              <label class="wide-field">
+                <span>What does the business do?</span>
+                <textarea data-profile-field="businessDescription" placeholder="Short version. What do you sell, provide, operate, or manage?"></textarea>
+              </label>
+            </div>
+          </article>
+
+          <article class="choice-panel wizard-step" data-board-panel="pain">
+            <span>Where is the pressure showing up?</span>
+            <div class="choice-list">
+              <label><input type="checkbox" value="Too many loose follow-ups">Too many loose follow-ups</label>
+              <label><input type="checkbox" value="Hiring, recruiting, or onboarding">Hiring, recruiting, or onboarding</label>
+              <label><input type="checkbox" value="Scheduling changes or coverage gaps">Scheduling changes or coverage gaps</label>
+              <label><input type="checkbox" value="Customer or stakeholder communication">Customer or stakeholder communication</label>
+              <label><input type="checkbox" value="Office admin and repeated paperwork">Office admin and repeated paperwork</label>
+              <label><input type="checkbox" value="Documents, notes, or internal knowledge">Documents, notes, or internal knowledge</label>
+              <label><input type="checkbox" value="Billing, payroll, or financial visibility">Billing, payroll, or financial visibility</label>
+              <label><input type="checkbox" value="Too many possible AI directions">Too many possible AI directions</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="What is the thing that keeps coming back onto your plate?"></textarea>
+            </label>
+          </article>
+
+          <article class="choice-panel wizard-step" data-board-panel="ideas">
+            <span>AI ideas you are curious about</span>
+            <div class="choice-list">
+              <label><input type="checkbox" value="Drafting emails or follow-ups">Drafting emails or follow-ups</label>
+              <label><input type="checkbox" value="Turning notes into tasks">Turning notes into tasks</label>
+              <label><input type="checkbox" value="Summarizing calls, meetings, or documents">Summarizing calls, meetings, or documents</label>
+              <label><input type="checkbox" value="Internal knowledge assistant">Internal knowledge assistant</label>
+              <label><input type="checkbox" value="Recruiting or onboarding support">Recruiting or onboarding support</label>
+              <label><input type="checkbox" value="Reports, dashboards, or financial visibility">Reports, dashboards, or financial visibility</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="Add any random AI ideas, even if they are half-formed."></textarea>
+            </label>
+          </article>
+
+          <article class="choice-panel wizard-step" data-board-panel="concerns">
+            <span>Concerns or red lines</span>
+            <div class="choice-list">
+              <label><input type="checkbox" value="Privacy or protected information">Privacy or protected information</label>
+              <label><input type="checkbox" value="Customer-facing automation">Customer-facing automation</label>
+              <label><input type="checkbox" value="Staff may not adopt it">Staff may not adopt it</label>
+              <label><input type="checkbox" value="Compliance or liability risk">Compliance or liability risk</label>
+              <label><input type="checkbox" value="Bad data going into the system">Bad data going into the system</label>
+              <label><input type="checkbox" value="AI making decisions it should not make">AI making decisions it should not make</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="What should AI absolutely not touch yet?"></textarea>
+            </label>
+          </article>
+
+          <article class="choice-panel wizard-step" data-board-panel="success">
+            <span>Success would look like</span>
+            <div class="choice-list">
+              <label><input type="checkbox" value="A few hours saved each week">A few hours saved each week</label>
+              <label><input type="checkbox" value="Less dropped follow-up">Less dropped follow-up</label>
+              <label><input type="checkbox" value="Clearer internal documentation">Clearer internal documentation</label>
+              <label><input type="checkbox" value="Staff feels less overwhelmed">Staff feels less overwhelmed</label>
+              <label><input type="checkbox" value="Better visibility into the business">Better visibility into the business</label>
+              <label><input type="checkbox" value="A simple repeatable AI habit">A simple repeatable AI habit</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="What would make discovery feel worth continuing?"></textarea>
+            </label>
+          </article>
+
+          <article class="phase-lane choice-panel wizard-step phase-one" data-board-panel="phase1">
+            <span>Discovery</span>
+            <strong>Safe, internal, useful in 30 days</strong>
+            <div class="choice-list">
+              <label><input type="checkbox" value="Staff-facing admin cleanup">Staff-facing admin cleanup</label>
+              <label><input type="checkbox" value="Follow-up drafts and task capture">Follow-up drafts and task capture</label>
+              <label><input type="checkbox" value="Internal knowledge base or FAQ">Internal knowledge base or FAQ</label>
+              <label><input type="checkbox" value="Meeting/document summaries">Meeting/document summaries</label>
+              <label><input type="checkbox" value="Simple weekly reporting">Simple weekly reporting</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="What feels safe and useful enough to start with?"></textarea>
+            </label>
+          </article>
+
+          <article class="phase-lane choice-panel wizard-step" data-board-panel="phase2">
+            <span>Phase 2</span>
+            <strong>Good idea, needs more maturity</strong>
+            <div class="choice-list">
+              <label><input type="checkbox" value="Dashboard tied to live business data">Dashboard tied to live business data</label>
+              <label><input type="checkbox" value="Workflow automation across tools">Workflow automation across tools</label>
+              <label><input type="checkbox" value="Recruiting pipeline support">Recruiting pipeline support</label>
+              <label><input type="checkbox" value="Structured staff onboarding system">Structured staff onboarding system</label>
+              <label><input type="checkbox" value="More advanced reporting">More advanced reporting</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="What seems valuable, but probably needs more setup first?"></textarea>
+            </label>
+          </article>
+
+          <article class="phase-lane choice-panel wizard-step" data-board-panel="later">
+            <span>Later</span>
+            <strong>Interesting, not urgent</strong>
+            <div class="choice-list">
+              <label><input type="checkbox" value="Marketing/referral experiments">Marketing/referral experiments</label>
+              <label><input type="checkbox" value="Customer education content">Customer education content</label>
+              <label><input type="checkbox" value="Custom tools for managers">Custom tools for managers</label>
+              <label><input type="checkbox" value="Deeper analytics">Deeper analytics</label>
+              <label><input type="checkbox" value="Training library">Training library</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="What should stay visible but not drive discovery?"></textarea>
+            </label>
+          </article>
+
+          <article class="phase-lane choice-panel wizard-step not-now" data-board-panel="notNow">
+            <span>Not Now</span>
+            <strong>Too risky, automated, or sensitive</strong>
+            <div class="choice-list">
+              <label><input type="checkbox" value="Sensitive or private workflows">Sensitive or private workflows</label>
+              <label><input type="checkbox" value="Automated customer-facing decisions">Automated customer-facing decisions</label>
+              <label><input type="checkbox" value="Replacing human judgment">Replacing human judgment</label>
+              <label><input type="checkbox" value="Compliance-sensitive automation">Compliance-sensitive automation</label>
+              <label><input type="checkbox" value="Anything staff will not trust yet">Anything staff will not trust yet</label>
+            </div>
+            <label class="comment-box">
+              <span>Comment</span>
+              <textarea placeholder="What should be explicitly off limits for now?"></textarea>
+            </label>
+          </article>
+
+          <article class="choice-panel wizard-step wizard-summary-step">
+            <span>Review and copy</span>
+            <p class="section-intro">This is the clean version to send back. It updates as the answers change.</p>
+            <textarea class="summary-output" id="board-summary" readonly aria-label="Discovery questionnaire summary"></textarea>
+          </article>
+        </div>
+
+        <div class="wizard-controls">
+          <button class="button secondary-button" type="button" id="wizard-back">Back</button>
+          <div class="alignment-actions">
+            <button class="button secondary-button" type="button" id="clear-board">Clear</button>
+            <button class="button" type="button" id="copy-board">Copy Summary</button>
+            <button class="button" type="button" id="wizard-next">Next</button>
+          </div>
+        </div>
+        <p class="form-note" id="board-status">Saved in this browser while you work.</p>
+      </section>
+    </main>
+
+    <footer class="discovery-footer">
+      <span>Spark AI</span>
+      <span>Discovery intake. Browser-local until copied.</span>
+    </footer>
+  </div>
+  <script src="phase1-wizard.js"></script>
+</body>
+</html>
